@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Proposal | Aiendri & Irin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="memories.html">Journey</a>
+        <a href="music.html">Soundtrack</a>
+        <a href="notes.html">Letters</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="proposal-box">
+            <h1>Dear Aiendri,</h1>
+            <div class="proposal-text">
+                <p>Hi there, actually first of all ik I'm sorry maybe I'm late or im on time but sorry. Last year on this day me Mr Irin Saha had a high fever and shivering body made courage to confess my feelings to the girl i was having a crush on & and see me today nearly ok but a bit broke due to situations then also I was not able to encourage myself cz ig ik what would be results, but always thinking of results isn't right so....</p>
+                
+                <p>I won't force you any way to accept or reject me, its totally based on ur feelings like if u love me u accept and if u not u reject and break up again, hmm that still hurts a lot -like a every day chestpain increasing with time...</p>
+                
+                <p>I won't make any fake promises like I've seen many other boys or couples would make for each other but I would like to be the real. If i say that i love u then u should know that I won't joking or anything if I'm urs then it's for my whole life. I won't promise of bringing u moon or stars but to keep you happy feel secure and safe in any aspects or conditions of life, i won't hide any of the stuff within me whether of a overthinking or any doubt I would talk and clear it out, i won't ever anyhow lead you to shred tears cz of me but would destroy the ones who are the reason behind it..</p>
+                
+                <p>I won't say a lot but the time I spent with u isn't or wasn't a one to be broke or lose... I just want to stay or live with you grow old maybe sounds some kind of fantasy or physco but it's true - these feelings are and were true all throughout these year from last year to till now Not for a single moment I've stopped loving you nor i would stop...</p>
+                
+                <h3 style="text-align:center; margin-top:40px; color:#d63384; font-family:'Dancing Script'; font-size:2rem;">Aiendri Das, will u be my soulmate once again? 👀</h3>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn-accept" onclick="accepted()">YES! ❤️</button>
+                <button class="btn-reject" id="noBtn" onclick="rejected()">Reject 💔</button>
+            </div>
+            
+            <p id="finalMessage" style="text-align:center; margin-top:20px; font-weight:bold; color:#d63384; font-size:1.2rem;"></p>
+        </div>
+    </div>
+
+    <div class="footer">Waiting for your heart to decide...</div>
+
+    <script>
+        let noCount = 0;
+        const noMessages = [
+            "Are you sure? 🥺",
+            "Think about it again... 💔",
+            "Nooo don't leave me! 😭",
+            "My chest pain is increasing... please? 🤕",
+            "You're breaking my heart, Aiendri... 🥀",
+            "I'll destroy the sadness for you, just say yes! 🔥",
+            "Last chance to change your mind... 💍"
+        ];
+
+        function rejected() {
+            if (noCount < noMessages.length) {
+                alert(noMessages[noCount]);
+                noCount++;
+                // Make the Yes button grow every time she says no
+                const yesBtn = document.querySelector('.btn-accept');
+                const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+                yesBtn.style.fontSize = (currentSize + 5) + 'px';
+                yesBtn.style.padding = (currentSize + 2) + 'px ' + (currentSize * 2.5) + 'px';
+            } else {
+                alert("Okay, I'm not letting you click that anymore! Just click Yes! 😤❤️");
+                document.getElementById('noBtn').style.display = 'none';
+            }
+        }
+
+        function accepted() {
+            document.querySelector('.btn-container').style.display = 'none';
+            document.getElementById('finalMessage').innerHTML = "I love you forever and ever and ever till 32nd February! 💍❤️✨";
+            
+            // Celebration Hearts Explosion
+            for(let i=0; i<50; i++) {
+                setTimeout(createHeart, i * 100);
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️'; heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        setInterval(createHeart, 600);
+    </script>
+</body>
+  </html>

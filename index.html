@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Aiendri ❤️ | 1 Year of Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="memories.html">Journey</a>
+        <a href="music.html">Soundtrack</a>
+        <a href="notes.html">Letters</a>
+    </nav>
+
+    <div id="anniversaryModal" style="display:flex; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); align-items: center; justify-content: center; backdrop-filter: blur(8px);">
+        <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 400px; border: 3px solid #d4af37; margin: 20px;">
+            <h2 style="margin-top:0; font-size: 2rem;">💍 Happy 1st "Yes" Day!</h2>
+            <p>I know I'm your Lyadheshor and I'm a little late... but I never forget how you changed my life, Aiendri.</p>
+            
+            <div style="background: #fff0f5; padding: 15px; border-radius: 12px; margin: 20px 0; border: 1px solid #ffb6c1;">
+                <p style="margin:0; font-size: 0.85rem; color: #d63384; font-weight: bold; text-transform: uppercase;">Countdown to Jan 2nd:</p>
+                <h3 id="timer" style="margin: 10px 0; color: #333; font-family: 'Poppins', sans-serif; font-size: 1.8rem;">0d 0h 0m</h3>
+                <p style="margin:0; font-size: 0.8rem; color: #888;">Until I can hug you properly.</p>
+            </div>
+            
+            <button onclick="document.getElementById('anniversaryModal').style.display='none'" style="background: #d63384; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-size: 1rem; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);">Enter Our World ❤️</button>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <section class="hero">
+            <h1 style="font-size: 3.5rem; margin-bottom: 10px;">Welcome Home, Pookie</h1>
+            <p style="font-style: italic; color: #666;">A little corner of the internet dedicated to us.</p>
+            
+            <div style="margin-top: 40px; position: relative; display: inline-block;">
+                <img src="main-photo.jpg" alt="Our Memory" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 8px solid white; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+                <div style="position: absolute; bottom: 10px; right: 10px; background: white; padding: 10px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">❤️</div>
+            </div>
+
+            <div style="margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
+                <p>365 days ago, you said "Yes" to me. Today, I'm saying "Thank You" for staying. Explore the tabs above to see our journey so far.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by ur Lyadheshor Doi Fuchka<br>
+        <span style="font-size: 0.7rem; letter-spacing: 2px;">FOREVER & ALWAYS</span>
+    </div>
+
+    <script>
+        // Countdown Logic (Meeting on Jan 2nd)
+        const countdownDate = new Date("Jan 2, 2026 10:00:00").getTime();
+        
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const diff = countdownDate - now;
+            
+            if (diff > 0) {
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById("timer").innerHTML = `${d}d ${h}h ${m}m`;
+            } else {
+                document.getElementById("timer").innerHTML = "I'm coming to see you!";
+            }
+        };
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Floating Hearts Animation
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }, 600);
+    </script>
+
+</body>
+  </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Soundtrack | Gayab Panda & Mishti Doi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="memories.html">Journey</a>
+        <a href="music.html">Soundtrack</a>
+        <a href="notes.html">Letters</a>
+    </nav>
+
+    <div class="content-wrapper" style="max-width: 700px;">
+        <h1>Our Soundtrack</h1>
+        <p>The songs that feel like you, even when we're apart.</p>
+
+        <div style="margin-top: 40px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(214, 51, 132, 0.1); border: 1px solid #fff0f5;">
+            <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/1" 
+                width="100%" height="380" frameBorder="0" allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+            </iframe>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; border-top: 1px solid #eee;">
+            <p style="font-style: italic; color: #d63384; font-family: 'Dancing Script', cursive; font-size: 1.4rem;">
+                "Every melody is a memory of us, maybe not ur fav but u have the control to change ."
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by ur Lyadheshor Doi Fuchka<br>
+        <span style="font-size: 0.7rem; letter-spacing: 2px;">FOREVER & ALWAYS</span>
+    </div>
+
+    <script>
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 15 + 10) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }, 600);
+    </script>
+
+</body>
+  </html>

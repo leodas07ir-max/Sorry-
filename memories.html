@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey | Aiendri & Lyadheshor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline { max-width: 800px; margin: 40px auto; padding: 20px; text-align: left; }
+        .memory-card {
+            background: white; margin-bottom: 25px; padding: 25px; border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(214, 51, 132, 0.08); border-left: 6px solid #d63384;
+        }
+        
+        /* The Gallery Grid */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        /* Making some photos bigger for a "scrapbook" feel */
+        .media-item.large { grid-row: span 2; }
+        .media-item.wide { grid-column: span 2; }
+
+        .media-item img, .media-item video {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .media-item:hover img { transform: scale(1.1); }
+
+        .video-label {
+            position: absolute; top: 10px; left: 10px;
+            background: rgba(214, 51, 132, 0.8); color: white;
+            padding: 5px 10px; border-radius: 20px; font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="memories.html">Journey</a>
+        <a href="music.html">Soundtrack</a>
+        <a href="notes.html">Letters</a>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>Our Journey</h1>
+        
+        <div class="timeline">
+            <div class="memory-card"><h3>My Jigri</h3><p>You're the inner circle of my life, Aiendri. The one I trust blindly.</p></div>
+            <div class="memory-card"><h3>Resilience</h3><p>June 2025 tested us, but we stayed strong. I'd choose you every time.</p></div>
+        </div>
+
+        <h2 style="margin-top: 60px;">The Scrapbook</h2>
+        <p>A collection of my favorite views (mostly just you).</p>
+
+        <div class="media-grid">
+            <div class="media-item wide">
+                <div class="video-label">VIDEO 1</div>
+                <video controls><source src="video1.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item wide">
+                <div class="video-label">VIDEO 2</div>
+                <video controls><source src="video2.mp4" type="video/mp4"></video>
+            </div>
+
+            <div class="media-item large"><img src="photo1.jpg"></div>
+            <div class="media-item"><img src="photo2.jpg"></div>
+            <div class="media-item"><img src="photo3.jpg"></div>
+            <div class="media-item wide"><img src="photo4.jpg"></div>
+            <div class="media-item"><img src="photo5.jpg"></div>
+            <div class="media-item large"><img src="photo6.jpg"></div>
+            <div class="media-item"><img src="photo7.jpg"></div>
+            <div class="media-item"><img src="photo8.jpg"></div>
+            <div class="media-item"><img src="photo9.jpg"></div>
+            <div class="media-item wide"><img src="photo10.jpg"></div>
+            <div class="media-item"><img src="photo11.jpg"></div>
+            <div class="media-item"><img src="photo12.jpg"></div>
+            <div class="media-item large"><img src="photo13.jpg"></div>
+            <div class="media-item"><img src="photo14.jpg"></div>
+            <div class="media-item"><img src="photo15.jpg"></div>
+            <div class="media-item"><img src="photo16.jpg"></div>
+            <div class="media-item"><img src="photo17.jpg"></div>
+            <div class="media-item wide"><img src="photo18.jpg"></div>
+            <div class="media-item"><img src="photo19.jpg"></div>
+            <div class="media-item"><img src="photo20.jpg"></div>
+        </div>
+    </div>
+
+    <div class="footer">Made with ❤️ by ur Lyadheshor Doi Fuchka</div>
+
+    <script>
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }, 600);
+    </script>
+</body>
+</html>

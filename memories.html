@@ -12,7 +12,6 @@
             box-shadow: 0 10px 25px rgba(214, 51, 132, 0.08); border-left: 6px solid #d63384;
         }
         
-        /* The Gallery Grid */
         .media-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -29,7 +28,6 @@
             background: white;
         }
 
-        /* Making some photos bigger for a "scrapbook" feel */
         .media-item.large { grid-row: span 2; }
         .media-item.wide { grid-column: span 2; }
 
@@ -44,6 +42,7 @@
             position: absolute; top: 10px; left: 10px;
             background: rgba(214, 51, 132, 0.8); color: white;
             padding: 5px 10px; border-radius: 20px; font-size: 0.7rem;
+            z-index: 2;
         }
     </style>
 </head>
@@ -70,33 +69,43 @@
         <div class="media-grid">
             <div class="media-item wide">
                 <div class="video-label">VIDEO 1</div>
-                <video controls><source src="video1.mp4" type="video/mp4"></video>
+                <video controls><source src="VID_20250427_114753_446.mp4" type="video/mp4"></video>
             </div>
             <div class="media-item wide">
                 <div class="video-label">VIDEO 2</div>
-                <video controls><source src="video2.mp4" type="video/mp4"></video>
+                <video controls><source src="VID_20250702_191057_866.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item wide">
+                <div class="video-label">VIDEO 3</div>
+                <video controls><source src="VID_20251114_203141_548.mp4" type="video/mp4"></video>
+            </div>
+            <div class="media-item wide">
+                <div class="video-label">VIDEO 4</div>
+                <video controls><source src="VID_20251228_212832_089.mp4" type="video/mp4"></video>
             </div>
 
-            <div class="media-item large"><img src="photo1.jpg"></div>
-            <div class="media-item"><img src="photo2.jpg"></div>
-            <div class="media-item"><img src="photo3.jpg"></div>
-            <div class="media-item wide"><img src="photo4.jpg"></div>
-            <div class="media-item"><img src="photo5.jpg"></div>
-            <div class="media-item large"><img src="photo6.jpg"></div>
-            <div class="media-item"><img src="photo7.jpg"></div>
-            <div class="media-item"><img src="photo8.jpg"></div>
-            <div class="media-item"><img src="photo9.jpg"></div>
-            <div class="media-item wide"><img src="photo10.jpg"></div>
-            <div class="media-item"><img src="photo11.jpg"></div>
-            <div class="media-item"><img src="photo12.jpg"></div>
-            <div class="media-item large"><img src="photo13.jpg"></div>
-            <div class="media-item"><img src="photo14.jpg"></div>
-            <div class="media-item"><img src="photo15.jpg"></div>
-            <div class="media-item"><img src="photo16.jpg"></div>
-            <div class="media-item"><img src="photo17.jpg"></div>
-            <div class="media-item wide"><img src="photo18.jpg"></div>
-            <div class="media-item"><img src="photo19.jpg"></div>
-            <div class="media-item"><img src="photo20.jpg"></div>
+            <div class="media-item large"><img src="1748020481605.jpg"></div>
+            <div class="media-item"><img src="IMG_20250302_030734_099.jpg"></div>
+            <div class="media-item"><img src="IMG_20250501_123956_850.jpg"></div>
+            <div class="media-item wide"><img src="IMG_20250706_173242_753.jpg"></div>
+            <div class="media-item"><img src="IMG_20250715_224350_532.jpg"></div>
+            <div class="media-item large"><img src="IMG_20250930_030507_385.jpg"></div>
+            <div class="media-item"><img src="IMG_20251003_135818_046.jpg"></div>
+            <div class="media-item"><img src="IMG_20251007_221133_005.jpg"></div>
+            <div class="media-item"><img src="IMG_20251021_191239.jpg"></div>
+            <div class="media-item wide"><img src="IMG_20251021_191249.jpg"></div>
+            <div class="media-item"><img src="IMG_20251023_021557_312.jpg"></div>
+            <div class="media-item"><img src="IMG_20251115_095533_217.jpg"></div>
+            <div class="media-item large"><img src="IMG_20251221_151815_744.jpg"></div>
+            <div class="media-item"><img src="IMG_20251224_184555_038.jpg"></div>
+            <div class="media-item"><img src="IMG_20251224_184555_042.jpg"></div>
+            <div class="media-item"><img src="IMG_20251230_213947_407.jpg"></div>
+
+            <div class="media-item"><img src="Screenshot_2025-08-02-00-06-12-69.png"></div>
+            <div class="media-item wide"><img src="Screenshot_2025-08-04-00-20-18-09.png"></div>
+            <div class="media-item"><img src="Screenshot_2025-09-27-18-32-41-95.png"></div>
+            <div class="media-item large"><img src="Screenshot_2025-10-01-14-11-22-79.png"></div>
+            <div class="media-item"><img src="Screenshot_2025-10-02-19-58-45-09.png"></div>
         </div>
     </div>
 
@@ -113,4 +122,4 @@
         }, 600);
     </script>
 </body>
-</html>
+    </html>
